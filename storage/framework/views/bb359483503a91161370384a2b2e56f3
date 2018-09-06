@@ -1,0 +1,21 @@
+<?php echo $__env->make('component.dialog', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php $__env->startSection('title', '测试'); ?>
+
+<?php $__env->startSection('content'); ?>
+<div class="weui_cells_title"></div>
+
+<div class="weui_cells_tips">这里是测试</div>
+<div class="weui_cells_tips"><?php echo e($num); ?></div>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('my-js'); ?>
+<script type="text/javascript">
+  $('.bk_validate_code').click(function () {
+    $(this).attr('src', '/service/validate_code/create?random=' + Math.random());
+  });
+</script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
